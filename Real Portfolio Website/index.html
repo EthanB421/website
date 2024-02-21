@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ethan Bautista</title>
@@ -12,13 +15,15 @@
         <div class="container">
             <nav>
                 <img src="images/EB.png" class="logo" alt="">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Portfolio</a></li>
-                            <li><a href="#">Contact</a></li>
+                    <ul id="sidemenu">
+                        <li><a href="#header">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <i class="fa-solid fa-x fas" onclick="closeMenu()"></i>
                     </ul>
+                    <i class="fa-solid fa-bars fas" onclick="openMenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Software Engineer</p>
@@ -50,16 +55,14 @@
                 </div>
                 <div class="tab-contents" id="experience">
                     <ul>
-                        <li><span>experience</span><br>Full Stack Development</li>
-                        <li><span>Full Stack Development</span><br>Full Stack Development<br></li>
-                        <li><span>Machine Learning</span><br>Full Stack Development<br></li>
+                        <li><span>Full Stack Developer</span><br>CSU Chancellor's Office</li>
+                        <li><span>AWS Certified Developer Associate</span><br>This website is fully deployed/hosted on AWS<br></li>
+                        <!-- <li><span>Machine Learning</span><br>Full Stack Development<br></li> -->
                     </ul>
                 </div>
                 <div class="tab-contents" id="education">
                     <ul>
-                        <li><span>education</span><br>Full Stack Development</li>
-                        <li><span>Full Stack Development</span><br>Full Stack Development<br></li>
-                        <li><span>Machine Learning</span><br>Full Stack Development<br></li>
+                        <li><span>2024</span><br>BS In Computer Science From Cal Poly Pomona</li>
                     </ul>
                 </div>
                 </div>
@@ -126,10 +129,25 @@
             <a href="" class="btn">See More</a>
         </div>
     </div>
+    <!-- ------contact-------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row contacts">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <div class="contactRow"><i class="fa-solid fa-envelope"></i> ethanbautsita421@yahoo.com</div>
+                    <div class="contactRow"><i class="fa-solid fa-phone"></i> 909-525-7176</div>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/ethan-bautista-a1303b234/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script>
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
-        
+        var sidemenu = document.getElementById("sidemenu");
+
         function opentab(tabName)
         {
             for(tablink of tablinks)
@@ -143,6 +161,14 @@
 
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabName).classList.add("active-tab");
+        }
+
+        function openMenu(){
+            sidemenu.style.right = "0";
+        }
+
+        function closeMenu(){
+            sidemenu.style.right = "-200px";
         }
     </script>
 </body>
