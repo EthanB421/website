@@ -115,7 +115,7 @@ nav ul li a:hover::after{
 .tab-links{
     margin-right: 20px;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: bold;
     cursor: pointer;
     position: relative;
 }
@@ -212,6 +212,7 @@ nav ul li a:hover::after{
 
 .work img{
     width:100%;
+    height: 100%;
     border-radius: 10px;
     display: block;
     transition: transform 0.5s;
@@ -221,7 +222,7 @@ nav ul li a:hover::after{
     height: 0;
     background:linear-gradient(rgba(0,0,0,0.6), rgb(235, 154, 15));
     border-radius: 10px;
-    position: absolute;
+    position:absolute;
     left: 0;
     bottom: 0;
     overflow: hidden;
@@ -292,12 +293,16 @@ flex-direction: column;
     font-size: 30px;
     color:#ababab;
 }
+
 /* --------css for small screens ------- */
 nav .fas{
     display: none;
 }
 
 @media only screen and (max-width: 600px){
+    #header{
+        background-image: url(images/phone.jpg);
+    }
     .header-text{
         margin-top: 100%;
         font-size: 16px;
@@ -338,5 +343,8 @@ nav .fas{
     }
     .sub-title{
         font-size: 40px;
+    }
+    .contacts div{
+        font-size: 13px;
     }
 }
